@@ -193,29 +193,7 @@
             }
         }
 
-        // Verify database connection
-        async function verifyDatabaseConnection() {
-            if (!database) {
-                console.error('Database not initialized');
-                return;
-            }
-
-            try {
-                const testRef = ref(database, '.info/connected');
-                const connectedRef = ref(database, '.info/connected');
-                
-                await set(testRef, {
-                    test: true,
-                    timestamp: Date.now()
-                });
-                
-                console.log('Database connection verified');
-            } catch (error) {
-                console.error('Database connection error:', error);
-                alert('Unable to connect to database. Please check your internet connection and try again.');
-            }
-        }
-
+       
         // Wait for DOM to load then verify connection
         document.addEventListener('DOMContentLoaded', verifyDatabaseConnection);
 
