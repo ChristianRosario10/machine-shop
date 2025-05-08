@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Here - Rod Machine Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        .hover-underline:hover {
+            text-decoration: underline !important;
+        }
+        #a { display: block; }
+        #b { display: none; }
+        .logo-placement {
+            display: flex;
+            align-items: center;
+        }
+        .nav-link {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 40px;
+            margin-right: 20px;
+        }
+        .nav-link.active {
+            color: #000;
+        }
+        .nav-link.btn {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        .nav-link.btn:hover {
+            color: #666;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+        #imagePreview {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+ 
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Book Your Work Request</h2>
+                        <form id="workRequestForm">
+                            <div class="mb-3">
+                                <label for="customerName" class="form-label required">Customer Name</label>
+                                <input type="text" class="form-control" id="customerName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactNumber" class="form-label required">Contact Number</label>
+                                <input type="tel" class="form-control" id="contactNumber" pattern="[0-9]{11}" required>
+                                <small class="text-muted">Format: 09XXXXXXXXX (11 digits)</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="partDescription" class="form-label required">Part Description</label>
+                                <textarea class="form-control" id="partDescription" rows="3" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="materialType" class="form-label required">Material Type</label>
+                                <select class="form-select" id="materialType" required>
+                                    <option value="">Select Material Type</option>
+                                    <option value="Steel">Steel</option>
+                                    <option value="Aluminum">Aluminum</option>
+                                    <option value="Brass">Brass</option>
+                                    <option value="Copper">Copper</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label required">Quantity</label>
+                                <input type="number" class="form-control" id="quantity" min="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dueDate" class="form-label required">Due Date</label>
+                                <input type="date" class="form-control" id="dueDate" required>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Submit Request</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <hr />
+                <div class="col-lg-12 col-md-12">
+                    <h2 class="mb-4">Contact Information</h2>
+                    <p>If you have any questions or inquiries, feel free to reach out to us. We're here to help!</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-envelope"></i> Email: <a href="mailto:rodmachineshop@gmail.com" class="text-decoration-none text-dark hover-underline">rodmachineshop@gmail.com</a></li>
+                        <li class="mb-2"><i class="bi bi-telephone"></i> Phone: <a href="tel:+639456718005" class="text-decoration-none text-dark hover-underline">+63 945 671 8005</a></li>
+                        <li class="mb-2"><i class="bi bi-geo-alt"></i> Address: Barangonbong, Sta Lucia Ilocos Sur</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid p-5" style="background-image: url('img/bg_f.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; color: #ffffff;">
+            <img src="img/ROD.png" alt="Logo" class="img-fluid mb-3" style="width: 150px; height: 150px; border-radius: 80px;" onerror="this.src='https://placehold.co/150x150?text=ROD'" />
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h3 class="text-uppercase">
+                        ROD MACHINE SHOP <br /> <h6>Committed to Excellence in Service.</h6>
+                    </h3>
+                    <p class="tex-justify" style="font-family: 'Bebas neue';">
+                        <strong class="text-danger" style="font-family: 'Bebas neue';">At ROD Machine Shop</strong>, we take pride in delivering top-quality machining solutions with precision and reliability. With a commitment to excellence, we offer expert craftsmanship, advanced technology, and exceptional customer service to meet your manufacturing and repair needs. Whether it's custom machining, metal fabrication, or equipment repair, we ensure superior results with every project.
+                    </p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-0">Social link</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light hover-underline"><i class="ri-facebook-line"></i> Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-0">Email</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:rodmachineshop@gmail.com" class="text-decoration-none text-light hover-underline"><i class="ri-mail-line"></i> rodmachineshop@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase">Learn more about Machine Shops</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="https://www.practicalmachinist.com/" class="text-decoration-none text-light hover-underline">practicalmachinist</a></li>
+                        <li><a href="https://www.pinayads.com/2025/01/the-core-of-manufacturing-an-essential-guide-to-machine-shops/" class="text-decoration-none text-light hover-underline">pinayads</a></li>
+                        <li><a href="https://www.mmsonline.com/" class="text-decoration-none text-light hover-underline">mmsonline</a></li>
+                        <li><a href="https://www.machinistsworkshop.com/" class="text-decoration-none text-light hover-underline">Machinist's Workshop</a></li>
+                        <li><a href="https://www.thomasnet.com/" class="text-decoration-none text-light hover-underline">ThomasNet</a></li>
+                        <li><a href="https://www.haascnc.com/" class="text-decoration-none text-light hover-underline">Haas Automation</a></li>
+                        <li><a href="https://www.machiningdoctor.com/" class="text-decoration-none text-light hover-underline">machiningdoctor</a></li>
+                        <li><a href="https://www.machineshoptours.com/" class="text-decoration-none text-light hover-underline">machineshoptours</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-0">Rod Machine shop Team</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-light hover-underline">Rodrigo Rosario</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Drixel Rosario</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Mark Palacio</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Myco Galus</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Roger Dailioan</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Jun Soliman</a></li>
+                        <li><a class="text-decoration-none text-light hover-underline">Frederick Sumacli</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase mb-0 text-danger">About the developer</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light hover-underline">here...</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center py-4">
+            <p class="m-0">© 2025 chan-chan R. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-app.js";
+        import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js";
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBFwa9t_axiROyS9HyEMBWYFrYs8vlGQ14",
+            authDomain: "rod-machine-shop.firebaseapp.com",
+            databaseURL: "https://rod-machine-shop-default-rtdb.firebaseio.com",
+            projectId: "rod-machine-shop",
+            storageBucket: "rod-machine-shop.firebasestorage.app",
+            messagingSenderId: "634114192437",
+            appId: "1:634114192437:web:7b4c61b2c5a7459152ed7c",
+            measurementId: "G-Y7E0MVR6JZ"
+        };
+
+        let app;
+        let database;
+
+        // Initialize Firebase
+        try {
+            app = initializeApp(firebaseConfig);
+            database = getDatabase(app);
+            console.log("Firebase initialized successfully");
+        } catch (error) {
+            console.error("Firebase initialization error:", error);
+            alert("Error initializing Firebase. Please refresh the page and try again.");
+        }
+
+        // Handle form submission
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const submitButton = document.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+            
+            try {
+                const form = event.target;
+                if (!form.checkValidity()) {
+                    throw new Error('Please fill in all required fields');
+                }
+
+                if (!database) {
+                    throw new Error('Database not initialized');
+                }
+
+                // Create request data
+                const timestamp = Date.now();
+                const formData = {
+                    customerName: form.customerName.value,
+                    contactNumber: form.contactNumber.value,
+                    partDescription: form.partDescription.value,
+                    materialType: form.materialType.value,
+                    quantity: parseInt(form.quantity.value),
+                    dueDate: form.dueDate.value,
+                    created_at: timestamp,
+                    status: 'Pending'
+                };
+
+                console.log('Attempting to save data:', formData);
+
+                // Save to root level of database
+                const requestsRef = ref(database, 'booking_requests');
+                const newRequestRef = push(requestsRef);
+
+                await set(newRequestRef, formData);
+                console.log('Data saved successfully with key:', newRequestRef.key);
+
+                // Show success message
+                alert('Work request submitted successfully!');
+                form.reset();
+                
+            } catch (error) {
+                console.error('Error:', error);
+                let errorMessage = 'An error occurred while submitting the form. ';
+                
+                if (error.code === 'PERMISSION_DENIED') {
+                    errorMessage += 'Permission denied. Please check database rules.';
+                } else if (error.message) {
+                    errorMessage += error.message;
+                }
+                
+                alert(errorMessage);
+            } finally {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            }
+        }
+
+        // Verify database connection
+        async function verifyDatabaseConnection() {
+            if (!database) {
+                console.error('Database not initialized');
+                return;
+            }
+
+            try {
+                const testRef = ref(database, '.info/connected');
+                const connectedRef = ref(database, '.info/connected');
+                
+                await set(testRef, {
+                    test: true,
+                    timestamp: Date.now()
+                });
+                
+                console.log('Database connection verified');
+            } catch (error) {
+                console.error('Database connection error:', error);
+                alert('Unable to connect to database. Please check your internet connection and try again.');
+            }
+        }
+
+        // Wait for DOM to load then verify connection
+        document.addEventListener('DOMContentLoaded', verifyDatabaseConnection);
+
+        // Attach form submit handler
+        document.getElementById('workRequestForm').addEventListener('submit', handleFormSubmit);
+    </script>
+</body>
+</html> 
